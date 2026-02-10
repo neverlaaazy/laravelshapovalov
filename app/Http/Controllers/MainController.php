@@ -20,4 +20,18 @@ class MainController extends Controller
         };
         return view('second', compact('a','b','products'));
     }
+
+    public function showIndex(){
+        return view('home');
+    }
+
+    public function showArray(){
+        $array =[
+            ['id' => 1, 'title' => 'krita', 'price' => 90,'path' => 'krita.png'],
+            ['id' => 2, 'title' => 'sfm', 'price' => 70,'path' => 'sfm.jpg'],
+            ['id' => 3, 'title' => 'gimp', 'price' => 100,'path' => 'gimp.png']
+        ];
+
+        return view('array', compact('array'));
+    }
 }

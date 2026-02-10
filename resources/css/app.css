@@ -12,5 +12,64 @@
 
 
 body{
-    background-color: rgb(184, 255, 255);
+    background-color: rgb(255, 190, 128);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    min-height: 100%;
+}
+html{
+    font-family: 'Century Gothic';
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+}
+section{
+    max-width: 1205px;
+    margin: 0 auto;
+    position: relative;
+}
+.logokrita{
+    width: 60px;
+}
+.sfmimg{
+    width: 120px;
+}
+header{
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+.sectionmain{
+    background-color: rgb(192, 192, 192);
+}
+footer{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+
+.sectionitems{
+    display: grid;
+
+}
+.item-img{
+    width: 200px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    max-width: 300px;
 }
