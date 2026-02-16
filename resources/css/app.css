@@ -93,3 +93,29 @@ footer{
     border: 2px solid black;
     max-width: 300px;
 }
+
+
+
+
+@custom-variant dark (@media(prefers-color-scheme: dark));
+
+
+@theme {
+    --color-main: #fc9803;
+    --color-accent: #f403fc;
+    --color-brand-50: #fcc2b6;
+    --color-brand-100: #faafa0;
+    --color-brand-200: #fa9a87;
+    --color-brand-300: #fc7c62;
+    --color-brand-400: #ff6040;
+    --color-brand-500: #fc2c03;
+    --color-brand-600: #e62600;
+    --color-brand-700: #bd2102;
+    --color-brand-800: #9c1a00;
+    --color-brand-900: #801703;
+    --color-brand-950: #591001;
+
+    --text-32: 2rem;
+
+    --gap-my: 60px;
+}

@@ -25,6 +25,9 @@
     <main>
         <section class="sectionmain">
             <img class="sfmimg" src="{{Vite::asset('resources/images/sfm.jpg')}}" alt="">
+            <div class="bg-main text-accent dark:bg-accent dark:text-main border-brand-950 text-32">
+                <p>Пример</p>
+            </div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium ab unde ex dolorum odio libero tenetur fuga accusamus aspernatur at beatae blanditiis, nihil saepe aliquid eos natus. Illo, adipisci.
         </section>
     </main>
