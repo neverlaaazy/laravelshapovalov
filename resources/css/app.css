@@ -93,8 +93,25 @@ footer{
     border: 2px solid black;
     max-width: 300px;
 }
-
-
+.secHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    min-height: 90px;
+}
+.ulRoutes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 400px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+}
 
 
 @custom-variant dark (@media(prefers-color-scheme: dark));

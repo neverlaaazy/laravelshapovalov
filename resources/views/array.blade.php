@@ -10,10 +10,10 @@
 
 <body>
     <header>
-        <section>
+        <section class="secHeader">
             <img class="logokrita" src="{{Vite::asset('resources/images/krita.png')}}" alt="">
             <div>
-                <ul>
+                <ul class="ulRoutes">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/">Welcome</a></li>
                     <li><a href="/second">Second</a></li>
@@ -26,7 +26,7 @@
         <section class="secActions">
             <a href="{{ route('array.shuffle') }}">Перемешать массив</a>
             <a href="{{ route('array.sort') }}">Сортировать массив</a>
-            <a href="{{ route('array.filter') }}">Цена больше 1000</a>
+            <a href="{{ route('array.filter') }}">Цена больше 1000&#8381;</a>
         </section>
         <section class="sectionmain sectionitems">
             @foreach($array as $item)
