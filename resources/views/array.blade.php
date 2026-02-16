@@ -23,6 +23,11 @@
         </section>
     </header>
     <main>
+        <section class="secActions">
+            <a href="{{ route('array.shuffle') }}">Перемешать массив</a>
+            <a href="{{ route('array.sort') }}">Сортировать массив</a>
+            <a href="{{ route('array.filter') }}">Цена больше 1000</a>
+        </section>
         <section class="sectionmain sectionitems">
             @foreach($array as $item)
                 <div class="item">

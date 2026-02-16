@@ -20,7 +20,27 @@
         @endif
     </head>
     <body>
-        <h1 class="text-purple-800 text-3xl italic">Hello</h1>
+        <header>
+        <section>
+            <img class="logokrita" src="{{Vite::asset('resources/images/krita.png')}}" alt="">
+            <div>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/">Welcome</a></li>
+                    <li><a href="/second">Second</a></li>
+                    <li><a href="/array">Array</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+        <main>
+            <h1 class="text-purple-800 text-3xl italic">Hello</h1>
         <a href="/second">Вторая страница</a>
+        </main>
+        <footer>
+        <section>
+            <p>&#169;Шаповалов Сергей Александрович, 2026г.</p>
+        </section>
+    </footer>
     </body>
 </html>

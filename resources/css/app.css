@@ -56,11 +56,31 @@ footer{
     background-color: rgb(37, 37, 37);
     color: white;
 }
+.secActions{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: gray;
+    padding: 20px;
+}
 
+.secActions a{
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.secActions a:hover,
+.secActions a:focus{
+    color: black;
+}
 
 .sectionitems{
     display: grid;
-
+    grid-template-columns:  300px 300px 300px;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .item-img{
     width: 200px;

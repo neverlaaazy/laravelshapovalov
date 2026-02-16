@@ -9,6 +9,18 @@ class MainController extends Controller
     public int $a = 1;
     public int $b = 5;
 
+    public $products = [
+            ['id' => 1, 'title' => 'krita', 'price' => 900,'path' => 'krita.png'],
+            ['id' => 2, 'title' => 'sfm', 'price' => 700,'path' => 'sfm.jpg'],
+            ['id' => 3, 'title' => 'gimp', 'price' => 10000,'path' => 'gimp.png'],
+            ['id' => 4, 'title' => 'krita', 'price' => 900,'path' => 'krita.png'],
+            ['id' => 5, 'title' => 'sfm', 'price' => 700,'path' => 'sfm.jpg'],
+            ['id' => 6, 'title' => 'gimp', 'price' => 10000,'path' => 'gimp.png'],
+            ['id' => 7, 'title' => 'krita', 'price' => 900,'path' => 'krita.png'],
+            ['id' => 8, 'title' => 'sfm', 'price' => 700,'path' => 'sfm.jpg'],
+            ['id' => 9, 'title' => 'gimp', 'price' => 10000,'path' => 'gimp.png']
+        ];
+
     public function show1(){
         $a = $this->a;
         $b = $this->b;
@@ -26,12 +38,28 @@ class MainController extends Controller
     }
 
     public function showArray(){
-        $array =[
-            ['id' => 1, 'title' => 'krita', 'price' => 90,'path' => 'krita.png'],
-            ['id' => 2, 'title' => 'sfm', 'price' => 70,'path' => 'sfm.jpg'],
-            ['id' => 3, 'title' => 'gimp', 'price' => 100,'path' => 'gimp.png']
-        ];
+        $array = $this->products;
+        return view('array', compact('array'));
+    }
 
+    public function shuffleArray(){
+        $array = $this->products;
+        shuffle($array);
+        return view('array', compact('array'));
+    }
+
+    public function sortArray(){
+        $array = $this->products;
+        usort($array, function($a,$b) {
+            return $a['price'] <=> $b['price'];
+        });
+        return view('array', compact('array'));
+    }
+
+    public function filterArray(){
+        $array = array_filter($this->products, function($item){
+            return $item['price'] > 1000;
+        });
         return view('array', compact('array'));
     }
 }
