@@ -8,15 +8,21 @@
 </head>
 <body>
     <header>
-
+        <a href="{{ route('report.create') }}">Создать заявление</a>
     </header>
     <main>
         <!-- (номер автомобиля, описание и дату создания) -->
         @foreach ($reports as $item)
             <div class="item">
-                <h2>{{$item['carnumber']}}</h2>
-                <p>{{$item['description']}}</p>
-                <p>{{$item['creationdate']}}</p>
+                <h2>{{$item->number}}</h2>
+                <p>{{$item->description}}</p>
+                <p>{{$item->created_at}}</p>
+                <a href="{{ route('report.edit',['report'=>$item]) }}">Редактировать</a>
+                <form method="POST" action="{{route('reports.destroy',$item->id)}}">
+                    @method('delete')
+                    @csrf
+                    <input type="submit" value="Удалить">
+                </form>
             </div>
         @endforeach
     </main>

@@ -19,3 +19,14 @@ Route::get('/array/filter',[MainController::class, 'filterArray'])->name('array.
 
 
 Route::get('/reports', [ReportController::class, 'index'])->name('report.index');
+
+Route::get('/reports/create',function(){
+    return view('report.create');
+})->name('report.create');
+
+Route::delete('/reports/{report}',[ReportController::class, 'destroy'])->name('reports.destroy');
+
+Route::post('/reports',[ReportController::class, 'store'])->name('reports.store');
+
+Route::get('/reports/{report}/edit', [ReportController::class, 'edit'])->name('report.edit');
+Route::put('/reports/{report}',[ReportController::class,'update'])->name('report.update');
