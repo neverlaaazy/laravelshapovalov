@@ -41,6 +41,7 @@
                 <h2>{{$item->number}}</h2>
                 <p>{{$item->description}}</p>
                 <p>{{$item->created_at}}</p>
+                <p class="font-bold">{{$item->status->name}}</p>
                 <div class="
                     flex
                     items-center
