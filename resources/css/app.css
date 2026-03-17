@@ -1,20 +1,8 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-    
-    --color-bacK: rgb(184, 233, 255);
-    --color-headeR: rgb(240, 248, 252);
-    --color-footeR: rgb(214, 239, 252);
-}
-
-
 
 *{
     margin: 0;
@@ -40,102 +28,4 @@ section{
     max-width: 1205px;
     margin: 0 auto;
     position: relative;
-}
-.logokrita{
-    width: 60px;
-}
-.sfmimg{
-    width: 120px;
-}
-header{
-    min-height: 120px;
-    /* background-color: rgb(70, 70, 70); */
-    /* color: white; */
-}
-.sectionmain{
-    background-color: rgb(192, 192, 192);
-}
-footer{
-    /* background-color: rgb(37, 37, 37);
-    color: white; */
-}
-.secActions{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    background-color: gray;
-    padding: 20px;
-}
-
-.secActions a{
-    color: white;
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-}
-.secActions a:hover,
-.secActions a:focus{
-    color: black;
-}
-
-.sectionitems{
-    display: grid;
-    grid-template-columns:  300px 300px 300px;
-    gap: 10px;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.item-img{
-    width: 200px;
-}
-.item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    max-width: 300px;
-}
-.secHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    min-height: 90px;
-}
-.ulRoutes{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 400px;
-}
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90px;
-}
-
-
-@custom-variant dark (@media(prefers-color-scheme: dark));
-
-
-@theme {
-    --color-main: #fc9803;
-    --color-accent: #f403fc;
-    --color-brand-50: #fcc2b6;
-    --color-brand-100: #faafa0;
-    --color-brand-200: #fa9a87;
-    --color-brand-300: #fc7c62;
-    --color-brand-400: #ff6040;
-    --color-brand-500: #fc2c03;
-    --color-brand-600: #e62600;
-    --color-brand-700: #bd2102;
-    --color-brand-800: #9c1a00;
-    --color-brand-900: #801703;
-    --color-brand-950: #591001;
-
-    --text-32: 2rem;
-
-    --gap-my: 60px;
 }

@@ -17,7 +17,7 @@
                 transition-colors 
                 duration-300
                 dark:text-white 
-                hover:text-bacK" href="{{ route('report.index') }}">К заявлениям</a>
+                hover:text-bacK" href="{{ route('reports.index') }}">К заявлениям</a>
         </section>
     </header>
     <main class="bg-bacK dark:bg-gray-700">

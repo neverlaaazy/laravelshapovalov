@@ -25,7 +25,7 @@
             <img class="logokrita" src="{{Vite::asset('resources/images/krita.png')}}" alt="">
             <div>
                 <ul class="ulRoutes">
-                    <li><a href="/home">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/">Welcome</a></li>
                     <li><a href="/second">Second</a></li>
                     <li><a href="/array">Array</a></li>

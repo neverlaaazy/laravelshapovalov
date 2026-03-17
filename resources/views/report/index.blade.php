@@ -11,7 +11,34 @@
 <body>
     <header class="bg-headeR dark:bg-gray-900">
         <section class="flex items-center justify-between min-h-[120px]">
-            <h1 class="text-2xl text-blue-800 dark:text-white">НАРУШЕНИЙ.НЕТ</h3>
+            <h1 class="text-2xl text-blue-800 dark:text-white">НАРУШЕНИЙ.НЕТ</h1>
+            <div>
+                <span>Сортировка по дате создания: </span>
+                <ul>
+                    <li>
+                        <a href="{{route('reports.index',['sort' => 'desc', 'status' => $status])}}">
+                            Показать новые
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('reports.index',['sort' => 'asc', 'status' => $status])}}">
+                            Показать старые
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p>Фильтрация по статусу заявки</p>
+                <ul>
+                    @foreach ($statuses as $status)
+                        <li>
+                            <a href="{{route('reports.index',['sort' => $sort, 'status' => $status->id])}}">
+                                {{$status->name}}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
                 <a class="
                 text-black 
                 transition-colors 
@@ -66,6 +93,7 @@
             </div>
             @endforeach
         </section>
+        <section>{{$reports->appends(request()->query())->links()}}</section>
     </main>
     <footer class="bg-footeR dark:bg-gray-900">
         <section>
