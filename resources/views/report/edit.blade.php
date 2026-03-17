@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Изменение</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-    <header class="bg-headeR dark:bg-gray-900">
-        <section class="flex items-center justify-between min-h-[120px]">
-            <h1 class="text-2xl text-blue-800 dark:text-white">НАРУШЕНИЙ.НЕТ</h3>
-            <a  class="
-                text-black 
-                transition-colors 
-                duration-300
-                dark:text-white 
-                hover:text-bacK" href="{{ route('reports.index') }}">К заявлениям</a>
-        </section>
-    </header>
-    <main class="bg-bacK dark:bg-gray-700">
+<x-app-layout>
+    <div class="bg-bacK dark:bg-gray-700">
         <section class="flex items-center 
                 justify-center">
             <form class="max-w-md mx-auto p-8 text-black dark:text-white bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-secondary/50 flex flex-col gap-6" action="{{route('reports.store')}}" action="{{route('report.update', $report->id)}}" method="POST">
@@ -34,12 +13,5 @@
            transition-all duration-300 hover:bg-bacK dark:hover:bg-gray-400  hover:-translate-y-1 active:scale-95" type="submit" value="Обновить">
             </form>
         </section>
-    </main>
-    <footer class="bg-footeR dark:bg-gray-900">
-        <section>
-
-        </section>
-    </footer>
-</body>
-
-</html>
+    </div>
+</x-app-layout>
