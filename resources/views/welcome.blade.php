@@ -34,6 +34,7 @@
         </section>
     </header>
         <main>
+
             <h1 class="text-purple-800 text-3xl italic">Hello</h1>
         <a href="/second">Вторая страница</a>
         </main>

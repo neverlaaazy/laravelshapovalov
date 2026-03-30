@@ -36,8 +36,14 @@ class ReportController extends Controller
     }
 
     public function destroy(Report $report){
-        $report -> delete();
-        return redirect()->back();
+
+        if(Auth::user()->id === $report->user_id){
+            $report -> delete();
+            return redirect()->back();
+        }
+        else{
+            abort(403, 'У вас нет прав на удаление этой записи.');
+        }
     }
 
     public function store(Request $request, Report $report){
@@ -63,12 +69,19 @@ class ReportController extends Controller
     }
 
     public function update(Request $request, Report $report){
-        $data = $request -> validate([
-            'number' => 'string',
-            'description' => 'string',
-        ]);
+        
 
-        $report->update($data);
-        return redirect()->back();
+        if(Auth::user()->id === $report->user_id){
+            $data = $request -> validate([
+                'number' => 'string',
+                'description' => 'string',
+            ]);
+
+            $report->update($data);
+            return redirect()->back();
+        }
+        else{
+            abort(403, 'У вас нет прав.');
+        }
     }
 }
