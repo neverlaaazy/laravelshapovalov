@@ -36,3 +36,20 @@ section{
     background: linear-gradient(to bottom, white, black);   
 }
 .mya{color:#0000ffe5}.mya:hover{color: #639;}
+
+.reportsTable,.reportsTableHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.reportsTableP,.reportsTableHead p{
+    width: 70px;
+}
+.reportsTableNML{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+}
+

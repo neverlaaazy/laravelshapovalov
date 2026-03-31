@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
+    const ADMIN_ROLE = 'admin';
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
@@ -53,5 +54,9 @@ class User extends Authenticatable
 
     public function reports(): HasMany{
         return $this->hasMany(Report::class);
+    }
+
+    public function isAdmin(){
+        return $this->role === self::ADMIN_ROLE;
     }
 }
