@@ -1,34 +1,8 @@
 <x-app-layout>
     <div class="bg-bacK dark:bg-gray-700">
-        <section>
-            <div>
-                <span>Сортировка по дате создания: </span>
-                <ul>
-                    <li>
-                        <a href="{{route('reports.index',['sort' => 'desc', 'status' => $status])}}">
-                            Показать новые
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('reports.index',['sort' => 'asc', 'status' => $status])}}">
-                            Показать старые
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <p>Фильтрация по статусу заявки</p>
-                <ul>
-                    @foreach ($statuses as $status)
-                    <li>
-                        <a href="{{route('reports.index',['sort' => $sort, 'status' => $status->id])}}">
-                            {{$status->name}}
-                        </a>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-        </section>
+        <x-filter :sort=$sort :status=$status>
+
+        </x-filter>
 
 
         <section>
@@ -51,8 +25,10 @@
                 <h2>{{$item->number}}</h2>
                 <p>{{$item->description}}</p>
                 <p>{{$item->created_at}}</p>
-                <p>user_id: {{$item->user_id}}</p>
-                <p class="font-bold">{{$item->status->name}}</p>
+                <p>{{$item->user->name}} {{$item->user->middlename}} {{$item->user->lastname}}</p>
+                <x-status :type="$item->status->id">
+                    {{$item->status->name}}
+                </x-status>
                 <div class="
                     flex
                     items-center

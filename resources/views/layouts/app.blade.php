@@ -27,7 +27,7 @@
                 <h1 class="text-2xl text-blue-800 dark:text-white">
                     НАРУШЕНИЙ.НЕТ
                 </h1>
-                <a class="
+                <!-- <a class="
                 text-black 
                 transition-colors 
                 duration-300
@@ -43,7 +43,7 @@
                 hover:text-bacK"
                     href="{{ route('report.create') }}">
                     Создать заявление
-                </a>
+                </a> -->
             </div>
         </header>
 
