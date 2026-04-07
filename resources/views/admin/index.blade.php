@@ -4,14 +4,14 @@
             <h1>Административная панель</h1>
             <div>
                 <div>
-                    <div class="reportsTableHead">
+                    <div class="grid grid-cols-4 gap-4 w-full">
                         <p>ФИО</p>
                         <p>Текст заявления</p>
                         <p>Номер Авто</p>
                         <p>Статус</p>
                     </div>
                     @foreach ($reports as $item)
-                    <div class="reportsTable">
+                    <div class="grid grid-cols-4 gap-4 w-full">
                         <div class="reportsTableNML">
                             <p>{{$item->user->name}} </p>
                             <p>{{$item->user->middlename}} </p>

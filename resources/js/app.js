@@ -1,6 +1,12 @@
 import './bootstrap';
+import 'flowbite';
+import.meta.glob([
+    '../images/**',
+ ]);
 
 import Alpine from 'alpinejs';
+import mask from '@alpinejs/mask';
+Alpine.plugin(mask);
 
 const selectElements = document.querySelectorAll('.status-form #status_id');
 console.log(selectElements);

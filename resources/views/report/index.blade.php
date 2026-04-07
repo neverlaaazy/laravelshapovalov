@@ -6,7 +6,7 @@
 
 
         <section>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 ">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ">
                 <!-- (номер автомобиля, описание и дату создания) -->
             @foreach ($reports as $item)
             <div class="
@@ -24,7 +24,7 @@
             ">
                 <h2>{{$item->number}}</h2>
                 <p>{{$item->description}}</p>
-                <p>{{$item->created_at}}</p>
+                <p>{{\Carbon\Carbon::parse($item->created_at)->translatedFormat('j F Y h:i');}}</p>
                 <p>{{$item->user->name}} {{$item->user->middlename}} {{$item->user->lastname}}</p>
                 <x-status :type="$item->status->id">
                     {{$item->status->name}}
