@@ -17,8 +17,11 @@
 </head>
 
 <body class="font-sans antialiased">
+    @include('layouts.flash-message')
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        
         @include('layouts.navigation')
+        
 
         <!-- Page Heading -->
 

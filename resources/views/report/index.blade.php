@@ -33,21 +33,13 @@
                     flex
                     items-center
                 ">
-                    <a class="
-                        text-blue-800 
-                        transition-colors 
-                        duration-300 
-                        hover:text-black"
+                    <a class="btnEdit index-btnMenu"
                         href="{{ route('report.edit',['report'=>$item]) }}">Изменить</a>
 
                     <form method="POST" action="{{route('reports.destroy',$item->id)}}">
                         @method('delete')
                         @csrf
-                        <input class="
-                        text-red-800 
-                        transition-colors 
-                        duration-300 
-                        hover:text-black" type="submit" value="Удалить">
+                        <input class="btnRemove index-btnMenu" type="submit" value="Удалить">
                     </form>
                 </div>
             </div>

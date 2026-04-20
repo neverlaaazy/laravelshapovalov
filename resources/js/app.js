@@ -2,7 +2,7 @@ import './bootstrap';
 import 'flowbite';
 import.meta.glob([
     '../images/**',
- ]);
+]);
 
 import Alpine from 'alpinejs';
 import mask from '@alpinejs/mask';

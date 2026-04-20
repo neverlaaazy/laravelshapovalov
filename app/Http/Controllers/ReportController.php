@@ -48,15 +48,16 @@ class ReportController extends Controller
 
     public function store(Request $request, Report $report){
         $data = $request -> validate([
-            'number' => 'string',
-            'description' => 'string'
+            'number' => ['required','string','max:255'],
+            'description' => ['required','string'],
         ]);
-        
-        $data['user_id'] = Auth::user()->id;
-        $data['status_id'] = 1;
-
-        $report->create($data);
-        return redirect()->back();
+        Report::create([
+            'number' => $request->number,
+            'description' => $request->description,
+            'status_id' => 1,
+            'user_id' => Auth::user()->id,
+        ]);
+        return redirect()->route('dashboard')->with('info','Заявление отправлено');
     }
 
     public function edit(Report $report){

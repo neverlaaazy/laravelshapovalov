@@ -1,0 +1,57 @@
+/* -------------------------Filter--------------------------- */
+
+.btnFilter{
+    background-color: white;
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btnFilter:hover,
+.btnFilter:focus{
+    background-color: rgb(54, 54, 54);
+    border-color: white;
+    color: white;
+}
+.li-btnFilter{
+    margin-bottom: 12px;
+    margin-top: 5px;
+}
+.btnReset{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+.btnReset:hover,
+.btnReset:focus{
+    background-color: rgb(209, 1, 1);
+    color: white;
+}
+
+/* -------------------------Reports index------------------------ */
+.index-btnMenu{
+    background-color: white;
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.index-btnMenu:hover,
+.index-btnMenu:focus{
+    background-color: rgb(54, 54, 54);
+    border-color: white;
+    color: white;
+}
+.btnEdit{
+    color: blue;
+}
+.btnEdit:hover,
+.btnEdit:focus{
+    background-color: rgb(1, 1, 196);
+}
+.btnRemove{
+    color: red;
+}
+.btnRemove:hover,
+.btnRemove:focus{
+    background-color: rgb(197, 0, 0);
+}
