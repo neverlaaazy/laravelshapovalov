@@ -15,7 +15,7 @@ use App\Http\Middleware\Admin;
 // Route::get('/array/shuffle',[MainController::class, 'shuffleArray'])->name('array.shuffle');
 // Route::get('/array/sort',[MainController::class, 'sortArray'])->name('array.sort');
 // Route::get('/array/filter',[MainController::class, 'filterArray'])->name('array.filter');
-
+Route::redirect('/', '/reports');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
