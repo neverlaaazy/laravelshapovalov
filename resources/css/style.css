@@ -55,3 +55,17 @@
 .btnRemove:focus{
     background-color: rgb(197, 0, 0);
 }
+.reportImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.report-num-des{
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.report-info{
+    margin: 10px;
+}
